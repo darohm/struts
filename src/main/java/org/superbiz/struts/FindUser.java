@@ -17,15 +17,23 @@
  */
 package org.superbiz.struts;
 
+import org.springframework.stereotype.Component;
+
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import java.util.Properties;
 
+@Component
 public class FindUser {
-
     private int id;
     private String errorMessage;
     private User user;
+    private UserService userService;
+
+
+    public FindUser(UserService userService) {
+        this.userService = userService;
+    }
 
     public User getUser() {
         return user;

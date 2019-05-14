@@ -17,6 +17,8 @@
 */
 package org.superbiz.struts;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -30,7 +32,7 @@ public class User implements Serializable {
     private String firstName;
     private String lastName;
 
-    public User(long id, String firstName, String lastName) {
+    public User(long id, String firstName, String lastName){
         super();
         this.id = id;
         this.firstName = firstName;
